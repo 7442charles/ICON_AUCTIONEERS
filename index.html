@@ -61,8 +61,6 @@
 </div>
 
 
-
-
 <!-- Main Navbar -->
 <nav class="bg-white shadow-md sticky top-0 z-50">
     <div class="container mx-auto px-4 md:px-10 py-4 flex justify-between items-center">
@@ -119,13 +117,68 @@
     </div>
 </nav>
 
-<script>
-    const menuBtn = document.getElementById('menu-btn');
-    const closeBtn = document.getElementById('close-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
+<!-- Hero Section -->
+<section class="relative w-full min-h-[80vh] flex items-center bg-cover bg-center" style="background-image: url('Assets/images/Hero_bg.png');">
+    <!-- Gradient Overlay -->
+    <div class="absolute inset-0 bg-[#08122B]/90"></div>
 
-    menuBtn.addEventListener('click', () => mobileMenu.classList.remove('-translate-x-full'));
-    closeBtn.addEventListener('click', () => mobileMenu.classList.add('-translate-x-full'));
-</script>
+    <div class="container mx-auto px-4 md:px-10 py-16 relative z-10 flex flex-col lg:flex-row items-center gap-12">
+        
+        <!-- Left Content -->
+        <div class="flex-1 text-white">
+            <p class="uppercase tracking-widest text-xs font-semibold mb-4 opacity-80">Kenya's online bidding platform</p>
+            <h1 class="text-4xl md:text-6xl font-serif font-bold leading-tight mb-6">
+                Bid on assets you trust, <span class="italic text-yellow-500">the moment</span> they go live.
+            </h1>
+            <p class="text-gray-300 mb-8 max-w-lg">
+                Icon Auctioneers brings two decades of licensed, court-recognised auctioneering online. Register free, watch a lot count down to open, and place verified bids from your phone — anywhere in Kenya.
+            </p>
+            
+            <div class="flex flex-wrap gap-4 mb-12">
+                <button class="bg-white text-[#08122B] px-8 py-3 font-bold hover:bg-gray-100 transition">Browse Live Auctions</button>
+                <button class="border border-white/30 text-white px-8 py-3 font-semibold hover:bg-white/10 transition">Explore Premium</button>
+            </div>
+
+            <!-- Stats Row -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div><h3 class="text-2xl font-bold">2005</h3><p class="text-xs text-gray-400">Founded & licensed</p></div>
+                <div><h3 class="text-2xl font-bold">Class B</h3><p class="text-xs text-gray-400">Auctioneering license</p></div>
+                <div><h3 class="text-2xl font-bold">4 Yards</h3><p class="text-xs text-gray-400">Nairobi · Mombasa · Nakuru · Kisumu</p></div>
+                <div><h3 class="text-2xl font-bold">Insured</h3><p class="text-xs text-gray-400">Every listed lot</p></div>
+            </div>
+        </div>
+
+        <!-- Featured Auction Card -->
+        <div class="w-full lg:w-[450px] bg-white rounded-lg shadow-2xl overflow-hidden text-[#08122B]">
+            <div class="relative">
+                <img src="Assets/images/Isuzu_FRR_Truck.png" alt="Auction Item" class="w-full h-48 object-cover">
+                <span class="absolute top-2 left-2 bg-red-600 text-white text-[10px] px-2 py-1 rounded uppercase font-bold">Live Now</span>
+            </div>
+            <div class="p-5">
+                <p class="text-[10px] text-gray-500 uppercase">Lot #IA-2231 • Pangani Auction Centre</p>
+                <h3 class="text-lg font-bold mt-1">Isuzu FRR Truck, 10 Ton</h3>
+                <p class="text-sm text-gray-600 mb-4">Heavy-duty flatbed, serviced quarterly. Viewing available at Kiambu Road yard.</p>
+                <div class="flex justify-between items-end mb-4">
+                    <div>
+                        <p class="text-[10px] uppercase text-gray-500">Current Bid</p>
+                        <p class="text-xl font-bold text-red-600">KES 1,855,000</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-[10px] uppercase text-gray-500">Closes in</p>
+                        <p class="font-bold text-sm">2h 14m 43s</p>
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <button class="flex-1 border border-gray-300 py-2 text-sm font-semibold hover:bg-gray-50">View Item</button>
+                    <button class="flex-1 bg-blue-800 text-white py-2 text-sm font-semibold hover:bg-blue-900">Bid Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script src="Assets/js/main.js"></script>
 </body>
 </html>
