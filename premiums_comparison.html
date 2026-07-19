@@ -13,6 +13,9 @@
     <meta property="og:description" content="Get earlier access, saved alerts, and dedicated support with our Premium membership.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://iconauctioneers.co.ke/premiums_comparison">
+
+    <!-- Favicon -->
+    <link rel="icon" href="Assets/images/Icon_Auctioneers_logo.png" type="image/x-icon">
     
     <!-- Canonical Link -->
     <link rel="canonical" href="https://iconauctioneers.co.ke/premiums_comparison">
@@ -49,32 +52,58 @@
     </div>
 </div>
 
-<!-- Main Navbar -->
+<!-- Main navbar -->
 <nav class="bg-white shadow-md sticky top-0 z-50">
     <div class="container mx-auto px-4 md:px-10 py-4 flex justify-between items-center">
-        <a href="index.html">
+        <!-- Logo -->
+        <a href="/">
             <img src="Assets/images/Icon_Auctioneers_logo.png" alt="Icon Auctioneers Logo" class="h-10 md:h-12 w-auto">
         </a>
 
         <!-- Desktop Menu -->
         <div class="hidden lg:flex items-center space-x-6 text-sm font-semibold text-gray-700">
-            <a href="index.html" class="hover:text-blue-700 transition">Home</a>
+            <a href="index.html" class="hover:text-blue-700 transition ">Home</a>
             <a href="Auctions_page.html" class="hover:text-blue-700 transition">Live & Upcoming</a>
             <a href="#" class="hover:text-blue-700 transition">How It Works</a>
-            <a href="Services.html" class="hover:text-blue-700 transition">Services</a>
-            <a href="#" class="border-b-2 border-blue-700 pb-1 text-blue-700">Premium</a>
+            <a href="services.html" class="hover:text-blue-700 transition">Services</a>
+            <a href="premiums_comparison.html" class="hover:text-blue-700 border-b-2 border-blue-700 pb-1">Premium</a>
             <a href="#" class="hover:text-blue-700 transition">Gallery</a>
-            <a href="#" class="hover:text-blue-700 transition">Contact</a>
+            <a href="contact.html" class="hover:text-blue-700 transition">Contact</a>
         </div>
 
+        <!-- Right Side: Auth Buttons + Hamburger -->
         <div class="flex items-center space-x-4">
+            <!-- Auth Buttons (Visible on Tablet/Desktop) -->
             <div class="hidden md:flex items-center space-x-4">
                 <a href="#" class="px-4 py-2 border border-gray-300 rounded hover:bg-gray-50 transition text-sm font-semibold">Sign in</a>
                 <a href="#" class="px-4 py-2 bg-[#08122B] text-white rounded hover:bg-blue-950 transition text-sm font-semibold">Register</a>
             </div>
+
+            <!-- Hamburger Icon (Visible on Mobile/Tablet) -->
             <button id="menu-btn" class="lg:hidden p-2 text-gray-700">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
+        </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="fixed inset-0 bg-[#08122B] text-white z-50 transform -translate-x-full transition-transform duration-300">
+        <!-- Drawer Header -->
+        <div class="bg-white p-4 flex justify-between items-center shadow-sm">
+            <img src="Assets/images/Icon_Auctioneers_logo.png" alt="Icon Auctioneers Logo" class="h-8 w-auto">
+            <button id="close-btn" class="text-[#08122B]">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+        <!-- Drawer Links -->
+        <div class="p-6 flex flex-col space-y-8 text-2xl font-bold">
+            <a href="index.html">Home</a>
+            <a href="Auctions_page.html">Live & Upcoming</a>
+            <a href="#">How It Works</a>
+            <a href="services.html">Services</a>
+            <a href="premiums_comparison.html">Premium</a>
+            <a href="#">Gallery</a>
+            <a href="contact.html">Contact</a>
         </div>
     </div>
 </nav>
