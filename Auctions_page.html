@@ -134,7 +134,139 @@
     </div>
 </section>
 
+<!-- Auction Lots Section -->
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-10">
+        
+        <!-- Category Filters -->
+        <div class="flex flex-wrap items-center gap-3 mb-12" id="filter-buttons">
+            <button data-filter="all" class="filter-btn bg-[#0033A0] text-white px-6 py-2 rounded-full text-sm font-semibold transition">All Lots</button>
+            <button data-filter="vehicles" class="filter-btn bg-white border border-[#0033A0] text-[#0033A0] px-6 py-2 rounded-full text-sm font-semibold hover:bg-gray-50 transition">Vehicles</button>
+            <button data-filter="trucks" class="filter-btn bg-white border border-[#0033A0] text-[#0033A0] px-6 py-2 rounded-full text-sm font-semibold hover:bg-gray-50 transition">Trucks & Machinery</button>
+            <button data-filter="office" class="filter-btn bg-white border border-[#0033A0] text-[#0033A0] px-6 py-2 rounded-full text-sm font-semibold hover:bg-gray-50 transition">Office Items</button>
+            <button data-filter="household" class="filter-btn bg-white border border-[#0033A0] text-[#0033A0] px-6 py-2 rounded-full text-sm font-semibold hover:bg-gray-50 transition">Household</button>
+        </div>
 
+        <!-- Auction Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="auction-grid">
+            
+            <!-- Card 1: Vehicle -->
+            <div class="auction-card bg-white rounded-lg shadow-lg overflow-hidden flex flex-col" data-category="vehicles">
+                <img src="https://images.unsplash.com/photo-1542282088-fe84dd073238?auto=format&fit=crop&w=600&q=80" alt="Toyota" class="w-full h-56 object-cover bg-gray-200">
+                <div class="p-6 flex-1 flex flex-col">
+                    <p class="text-[10px] text-gray-500 uppercase tracking-wider mb-2">LOT #IA-2214 • Nairobi Yard</p>
+                    <h3 class="text-xl font-bold text-[#08122B] mb-2">Toyota Land Cruiser Prado</h3>
+                    <p class="text-sm text-gray-600 mb-6 flex-1">2016, diesel, repossessed unit, mechanically sound.</p>
+                    <div class="flex justify-between items-end mb-6">
+                        <div><p class="text-[10px] uppercase text-gray-500">Current Bid</p><p class="text-lg font-bold text-[#08122B]">KES 2,950,000</p></div>
+                        <div class="text-right"><p class="text-[10px] uppercase text-gray-500">Closes in</p><p class="font-bold text-sm text-red-600">2d 5h 29m</p></div>
+                    </div>
+                    <div class="flex gap-3"><button class="flex-1 border border-gray-300 py-2 text-sm font-semibold hover:bg-gray-50">View Item</button><button class="flex-1 bg-[#0033A0] text-white py-2 text-sm font-semibold">Bid</button></div>
+                </div>
+            </div>
+
+            <!-- Card 2: Truck -->
+            <div class="auction-card bg-white rounded-lg shadow-lg overflow-hidden flex flex-col" data-category="trucks">
+                <img src="https://images.unsplash.com/photo-1587349949138-012975d77683?auto=format&fit=crop&w=600&q=80" alt="Truck" class="w-full h-56 object-cover bg-gray-200">
+                <div class="p-6 flex-1 flex flex-col">
+                    <p class="text-[10px] text-gray-500 uppercase tracking-wider mb-2">LOT #IA-2240 • Rajema Storage Yard</p>
+                    <h3 class="text-xl font-bold text-[#08122B] mb-2">Caterpillar Excavator 320D</h3>
+                    <p class="text-sm text-gray-600 mb-6 flex-1">Well-maintained, low hours, available for site viewing.</p>
+                    <div class="flex justify-between items-end mb-6">
+                        <div><p class="text-[10px] uppercase text-gray-500">Opening Bid</p><p class="text-lg font-bold text-[#08122B]">KES 3,400,000</p></div>
+                        <div class="text-right"><p class="text-[10px] uppercase text-gray-500">Opens in</p><p class="font-bold text-sm text-red-600">7d 0h 59m</p></div>
+                    </div>
+                    <div class="flex gap-3"><button class="flex-1 border border-gray-300 py-2 text-sm font-semibold hover:bg-gray-50">View Item</button><button class="flex-1 bg-[#0033A0] text-white py-2 text-sm font-semibold">Bid</button></div>
+                </div>
+            </div>
+
+            <!-- Card 3: Office -->
+            <div class="auction-card bg-white rounded-lg shadow-lg overflow-hidden flex flex-col" data-category="office">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80" alt="Office" class="w-full h-56 object-cover bg-gray-200">
+                <div class="p-6 flex-1 flex flex-col">
+                    <p class="text-[10px] text-gray-500 uppercase tracking-wider mb-2">LOT #IA-2251 • Pangani Auction Centre</p>
+                    <h3 class="text-xl font-bold text-[#08122B] mb-2">Executive Office Desk Set</h3>
+                    <p class="text-sm text-gray-600 mb-6 flex-1">Desk with side drawers, recliner and swing seat, ex-corporate.</p>
+                    <div class="flex justify-between items-end mb-6">
+                        <div><p class="text-[10px] uppercase text-gray-500">Opening Bid</p><p class="text-lg font-bold text-[#08122B]">KES 32,000</p></div>
+                        <div class="text-right"><p class="text-[10px] uppercase text-gray-500">Opens in</p><p class="font-bold text-sm text-red-600">5d 0h 29m</p></div>
+                    </div>
+                    <div class="flex gap-3"><button class="flex-1 border border-gray-300 py-2 text-sm font-semibold hover:bg-gray-50">View Item</button><button class="flex-1 bg-[#0033A0] text-white py-2 text-sm font-semibold">Bid</button></div>
+                </div>
+            </div>
+
+            <!-- Card 4: Household -->
+            <div class="auction-card bg-white rounded-lg shadow-lg overflow-hidden flex flex-col" data-category="household">
+                <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=600&q=80" alt="Household" class="w-full h-56 object-cover bg-gray-200">
+                <div class="p-6 flex-1 flex flex-col">
+                    <p class="text-[10px] text-gray-500 uppercase tracking-wider mb-2">LOT #IA-2199 • Pangani Auction Centre</p>
+                    <h3 class="text-xl font-bold text-[#08122B] mb-2">Salon Equipment Bundle</h3>
+                    <p class="text-sm text-gray-600 mb-6 flex-1">Styling chairs, dryers and trolleys from a closed salon.</p>
+                    <div class="flex justify-between items-end mb-6">
+                        <div><p class="text-[10px] uppercase text-gray-500">Current Bid</p><p class="text-lg font-bold text-[#08122B]">KES 68,500</p></div>
+                        <div class="text-right"><p class="text-[10px] uppercase text-gray-500">Closes in</p><p class="font-bold text-sm text-red-600">1d 7h 29m</p></div>
+                    </div>
+                    <div class="flex gap-3"><button class="flex-1 border border-gray-300 py-2 text-sm font-semibold hover:bg-gray-50">View Item</button><button class="flex-1 bg-[#0033A0] text-white py-2 text-sm font-semibold">Bid</button></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-16 text-center">
+            <button class="border border-gray-300 px-8 py-3 font-semibold text-gray-800 bg-white hover:bg-gray-50 transition shadow-sm rounded">Request the Full Gazette Listing</button>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Signup Block -->
+<section class="py-16">
+    <div class="container mx-auto px-4 md:px-10">
+        <div class="bg-[#0033A0] rounded-lg p-8 md:p-12 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+            <!-- Text Content -->
+            <div class="text-white max-w-lg">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Never miss an auction opening again.</h2>
+                <p class="text-blue-100">Join our alert list and know the moment a lot in your category goes live.</p>
+            </div>
+            
+            <!-- Signup Form -->
+            <form class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+                <input 
+                    type="email" 
+                    placeholder="you@email.com" 
+                    class="px-4 py-3 rounded text-sm w-full sm:w-64 focus:outline-none"
+                    required
+                >
+                <button 
+                    type="submit" 
+                    class="bg-white text-[#0033A0] font-semibold px-6 py-3 rounded hover:bg-gray-100 transition"
+                >
+                    Notify Me
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+    const buttons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.auction-card');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-[#0033A0]', 'text-white');
+                btn.classList.add('bg-white', 'text-[#0033A0]', 'border', 'border-[#0033A0]');
+            });
+            button.classList.remove('bg-white', 'text-[#0033A0]', 'border');
+            button.classList.add('bg-[#0033A0]', 'text-white');
+            
+            const filter = button.getAttribute('data-filter');
+            cards.forEach(card => {
+                card.style.display = (filter === 'all' || card.getAttribute('data-category') === filter) ? 'flex' : 'none';
+            });
+        });
+    });
+</script>
 
 <!-- Footer Section -->
 <footer class="bg-[#08122B] text-gray-400 py-16 text-sm">
