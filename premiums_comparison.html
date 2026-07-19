@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page Title & SEO -->
+    <title>Premium Bidding Tools | Icon Auctioneers Kenya</title>
+    <meta name="description" content="Upgrade to Premium at Icon Auctioneers for earlier auction access, saved search alerts, and a dedicated line to our auctioneers.">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Unlock Premium Bidding Tools | Icon Auctioneers">
+    <meta property="og:description" content="Get earlier access, saved alerts, and dedicated support with our Premium membership.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://iconauctioneers.co.ke/premiums_comparison">
+    
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://iconauctioneers.co.ke/premiums_comparison">
+    
+    <!-- CSS Dependencies -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Theme Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#08122B',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased">
+
+<!-- Top Info Bar -->
+<div class="bg-[#08122B] text-gray-400 text-xs py-2 border-b border-gray-800">
+    <div class="container mx-auto px-4 md:px-10 flex flex-wrap md:flex-nowrap justify-center md:justify-between items-center gap-y-2 gap-x-6">
+        <div class="flex flex-row items-center gap-4">
+            <a href="mailto:info@iconauctions.co.ke" class="hover:text-white transition-colors">info@iconauctions.co.ke</a>
+            <a href="tel:+254722488446" class="hover:text-white transition-colors">+254 722 488 446</a>
+        </div>
+        <div class="w-full md:w-auto uppercase tracking-widest text-[10px] text-center md:text-right">
+            Class B Licensed & Insured - Est. 2005
+        </div>
+    </div>
+</div>
+
+<!-- Main Navbar -->
+<nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 md:px-10 py-4 flex justify-between items-center">
+        <a href="index.html">
+            <img src="Assets/images/Icon_Auctioneers_logo.png" alt="Icon Auctioneers Logo" class="h-10 md:h-12 w-auto">
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center space-x-6 text-sm font-semibold text-gray-700">
+            <a href="index.html" class="hover:text-blue-700 transition">Home</a>
+            <a href="Auctions_page.html" class="hover:text-blue-700 transition">Live & Upcoming</a>
+            <a href="#" class="hover:text-blue-700 transition">How It Works</a>
+            <a href="Services.html" class="hover:text-blue-700 transition">Services</a>
+            <a href="#" class="border-b-2 border-blue-700 pb-1 text-blue-700">Premium</a>
+            <a href="#" class="hover:text-blue-700 transition">Gallery</a>
+            <a href="#" class="hover:text-blue-700 transition">Contact</a>
+        </div>
+
+        <div class="flex items-center space-x-4">
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="#" class="px-4 py-2 border border-gray-300 rounded hover:bg-gray-50 transition text-sm font-semibold">Sign in</a>
+                <a href="#" class="px-4 py-2 bg-[#08122B] text-white rounded hover:bg-blue-950 transition text-sm font-semibold">Register</a>
+            </div>
+            <button id="menu-btn" class="lg:hidden p-2 text-gray-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="bg-gradient-to-br from-[#08122B] via-[#001D59] to-[#0037A6] py-20">
+    <div class="container mx-auto px-4 md:px-10">
+        <!-- Breadcrumb -->
+        <nav class="text-blue-200 text-xs uppercase tracking-widest mb-6">
+            <a href="index.html" class="hover:text-white transition">Home</a> 
+            <span class="mx-2">/</span> 
+            <span>Premium</span>
+        </nav>
+
+        <!-- Heading -->
+        <div class="max-w-2xl">
+            <h1 class="text-5xl font-serif font-bold text-white mb-6">Unlock Premium bidding tools</h1>
+            <p class="text-blue-100 text-lg">
+                Every registered bidder can browse and bid for free. Premium members get earlier access, saved alerts, and a dedicated line to our auctioneers.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Pricing Section with JS Toggle -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-10">
+        
+        <!-- Toggle Switch -->
+        <div class="flex justify-center mb-16">
+            <div id="pricing-toggle" class="bg-white p-1 rounded-full shadow-sm border border-gray-200 inline-flex cursor-pointer">
+                <div id="monthly-btn" class="bg-[#0033A0] text-white px-8 py-2 rounded-full text-sm font-semibold transition">Monthly</div>
+                <div id="annual-btn" class="text-gray-500 px-8 py-2 rounded-full text-sm font-semibold hover:text-gray-800 transition">Annual — save 20%</div>
+            </div>
+        </div>
+
+        <!-- Pricing Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center max-w-6xl mx-auto">
+            
+            <!-- Standard Card -->
+            <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm">
+                <h3 class="text-xl font-bold mb-4">Standard</h3>
+                <div class="mb-6"><span class="text-4xl font-bold">Free</span><span class="text-gray-500 ml-2">forever</span></div>
+                <p class="text-gray-600 mb-6 text-sm">Everything you need to register and start bidding today.</p>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-center text-sm text-gray-700"><i class="fas fa-check text-green-600 mr-3"></i>Browse all live & upcoming lots</li>
+                    <li class="flex items-center text-sm text-gray-700"><i class="fas fa-check text-green-600 mr-3"></i>Place bids on any category</li>
+                </ul>
+                <button class="w-full py-3 border border-gray-300 rounded font-semibold hover:bg-gray-50 transition">Get Started</button>
+            </div>
+
+            <!-- Premium Card -->
+            <div class="bg-[#08122B] p-8 rounded-xl shadow-2xl relative">
+                <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#D4AF37] text-[#08122B] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Most popular</div>
+                <h3 class="text-xl font-bold text-white mb-4">Premium</h3>
+                <div class="mb-6 text-white">
+                    <span id="premium-price" class="text-4xl font-bold">KES 1,500</span>
+                    <span class="text-gray-400 ml-1 text-sm">/month</span>
+                </div>
+                <p class="text-gray-300 mb-6 text-sm">For active bidders who don't want to miss an opening hammer.</p>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-center text-sm text-white"><i class="fas fa-check text-green-500 mr-3"></i>Everything in Standard</li>
+                    <li class="flex items-center text-sm text-white"><i class="fas fa-check text-green-500 mr-3"></i>SMS & WhatsApp opening alerts</li>
+                </ul>
+                <button class="w-full py-3 bg-[#0033A0] text-white rounded font-semibold hover:bg-blue-800 transition">Go Premium</button>
+            </div>
+
+            <!-- Elite Trader Card -->
+            <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm">
+                <h3 class="text-xl font-bold mb-4">Elite Trader</h3>
+                <div class="mb-6">
+                    <span id="elite-price" class="text-4xl font-bold">KES 4,000</span>
+                    <span class="text-gray-500 ml-1 text-sm">/month</span>
+                </div>
+                <p class="text-gray-600 mb-6 text-sm">Built for dealers and repeat buyers bidding across categories.</p>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-center text-sm text-gray-700"><i class="fas fa-check text-green-600 mr-3"></i>Everything in Premium</li>
+                    <li class="flex items-center text-sm text-gray-700"><i class="fas fa-check text-green-600 mr-3"></i>Flexible settlement terms</li>
+                </ul>
+                <button class="w-full py-3 border border-gray-300 rounded font-semibold hover:bg-gray-50 transition">Talk to Us</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Detailed Comparison Table -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-10 max-w-6xl">
+        <div class="overflow-x-auto border border-gray-200 rounded-lg">
+            <table class="w-full text-left border-collapse">
+                <!-- Table Header -->
+                <thead>
+                    <tr class="bg-gray-100 text-gray-700 text-sm font-semibold uppercase tracking-wider">
+                        <th class="p-6 border-b">Feature</th>
+                        <th class="p-6 border-b text-center">Standard</th>
+                        <th class="p-6 border-b text-center">Premium</th>
+                        <th class="p-6 border-b text-center">Elite Trader</th>
+                    </tr>
+                </thead>
+                <!-- Table Body -->
+                <tbody class="text-gray-600 divide-y divide-gray-100">
+                    <tr>
+                        <td class="p-6 font-medium text-gray-800">Browse & bid on all lots</td>
+                        <td class="p-6 text-center"><i class="fas fa-check text-green-600"></i></td>
+                        <td class="p-6 text-center"><i class="fas fa-check text-green-600"></i></td>
+                        <td class="p-6 text-center"><i class="fas fa-check text-green-600"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="p-6 font-medium text-gray-800">Early access (24 hrs)</td>
+                        <td class="p-6 text-center"><i class="fas fa-times text-gray-300"></i></td>
+                        <td class="p-6 text-center"><i class="fas fa-check text-green-600"></i></td>
+                        <td class="p-6 text-center"><i class="fas fa-check text-green-600"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="p-6 font-medium text-gray-800">SMS & WhatsApp alerts</td>
+                        <td class="p-6 text-center"><i class="fas fa-times text-gray-300"></i></td>
+                        <td class="p-6 text-center"><i class="fas fa-check text-green-600"></i></td>
+                        <td class="p-6 text-center"><i class="fas fa-check text-green-600"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="p-6 font-medium text-gray-800">Dedicated account auctioneer</td>
+                        <td class="p-6 text-center"><i class="fas fa-times text-gray-300"></i></td>
+                        <td class="p-6 text-center"><i class="fas fa-times text-gray-300"></i></td>
+                        <td class="p-6 text-center"><i class="fas fa-check text-green-600"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="p-6 font-medium text-gray-800">Bulk-lot & fleet bidding</td>
+                        <td class="p-6 text-center"><i class="fas fa-times text-gray-300"></i></td>
+                        <td class="p-6 text-center"><i class="fas fa-times text-gray-300"></i></td>
+                        <td class="p-6 text-center"><i class="fas fa-check text-green-600"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+<!-- FAQ Section -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-10 max-w-3xl">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+            <h4 class="text-[#0033A0] text-xs font-bold uppercase tracking-widest mb-3">Premium FAQ</h4>
+            <h2 class="text-4xl font-serif font-bold text-[#08122B]">Before you upgrade</h2>
+        </div>
+
+        <!-- Accordion Items -->
+        <div class="space-y-4">
+            <!-- FAQ Item 1 -->
+            <div class="bg-white border border-gray-200 rounded-lg">
+                <button class="faq-toggle w-full p-6 text-left flex justify-between items-center focus:outline-none">
+                    <span class="font-bold text-[#08122B]">Can I cancel anytime?</span>
+                    <i class="fas fa-minus text-[#08122B]"></i>
+                </button>
+                <div class="faq-content px-6 pb-6 text-sm text-gray-600 leading-relaxed">
+                    Yes. Premium and Elite Trader are billed monthly or annually and can be cancelled at any time from your account settings.
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="bg-white border border-gray-200 rounded-lg">
+                <button class="faq-toggle w-full p-6 text-left flex justify-between items-center focus:outline-none">
+                    <span class="font-bold text-[#08122B]">How is early access applied?</span>
+                    <i class="fas fa-plus text-[#08122B]"></i>
+                </button>
+                <div class="faq-content px-6 pb-6 text-sm text-gray-600 leading-relaxed hidden">
+                    Early access allows you to view and bid on new auction listings 24 hours before they are released to the general public.
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="bg-white border border-gray-200 rounded-lg">
+                <button class="faq-toggle w-full p-6 text-left flex justify-between items-center focus:outline-none">
+                    <span class="font-bold text-[#08122B]">Is there a contract for Elite Trader?</span>
+                    <i class="fas fa-plus text-[#08122B]"></i>
+                </button>
+                <div class="faq-content px-6 pb-6 text-sm text-gray-600 leading-relaxed hidden">
+                    Elite Trader is a month-to-month subscription service. While there is no long-term contract, our team is available to discuss custom enterprise agreements for high-volume dealers.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.querySelectorAll('.faq-toggle').forEach(button => {
+        button.addEventListener('click', () => {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            // Toggle visibility
+            content.classList.toggle('hidden');
+            
+            // Toggle icon
+            icon.classList.toggle('fa-plus');
+            icon.classList.toggle('fa-minus');
+        });
+    });
+</script>
+
+
+<script>
+    const monthlyBtn = document.getElementById('monthly-btn');
+    const annualBtn = document.getElementById('annual-btn');
+    const premiumPrice = document.getElementById('premium-price');
+    const elitePrice = document.getElementById('elite-price');
+
+    monthlyBtn.addEventListener('click', () => {
+        monthlyBtn.classList.add('bg-[#0033A0]', 'text-white');
+        annualBtn.classList.remove('bg-[#0033A0]', 'text-white');
+        premiumPrice.innerText = 'KES 1,500';
+        elitePrice.innerText = 'KES 4,000';
+    });
+
+    annualBtn.addEventListener('click', () => {
+        annualBtn.classList.add('bg-[#0033A0]', 'text-white');
+        monthlyBtn.classList.remove('bg-[#0033A0]', 'text-white');
+        premiumPrice.innerText = 'KES 14,400';
+        elitePrice.innerText = 'KES 38,400';
+    });
+</script>
+
+
+<!-- Footer Section -->
+<footer class="bg-[#08122B] text-gray-400 py-16 text-sm">
+    <div class="container mx-auto px-4 md:px-10">
+        
+        <!-- Main Footer Links -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <!-- Brand Column -->
+            <div class="space-y-4">
+                <img src="Assets/images/Icon_Auctioneers_footer_logo.jpg" alt="Icon Auctioneers Logo" class="h-12 w-auto">
+                <p>Licensed Class B auctioneers running live online and physical auctions for vehicles, property, machinery and household assets across Kenya since 2005.</p>
+            </div>
+
+            <!-- Company -->
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wider mb-6">Company</h4>
+                <ul class="space-y-4">
+                    <li><a href="#" class="hover:text-white transition">About</a></li>
+                    <li><a href="#" class="hover:text-white transition">Services</a></li>
+                    <li><a href="#" class="hover:text-white transition">Careers</a></li>
+                    <li><a href="#" class="hover:text-white transition">Gazette Listings</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wider mb-6">Support</h4>
+                <ul class="space-y-4">
+                    <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                    <li><a href="#" class="hover:text-white transition">Legal Notice</a></li>
+                    <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white transition">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <!-- Bidding -->
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wider mb-6">Bidding</h4>
+                <ul class="space-y-4">
+                    <li><a href="#" class="hover:text-white transition">Live Auctions</a></li>
+                    <li><a href="#" class="hover:text-white transition">Premium Membership</a></li>
+                    <li><a href="#" class="hover:text-white transition">Register to Bid</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="border-t border-gray-800 pt-8 space-y-8">
+            <p class="text-xs max-w-4xl">
+                Icon Auctioneers is a licensed Kenyan auctioneering firm offering online auctions Kenya, live vehicle auctions Nairobi, repossessed car auctions, bank auction vehicles, property and land auctions, machinery and truck auctions, and household item auctions, with public auction listings across Nairobi, Mombasa, Nakuru and Kisumu.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+                <p>&copy; 2026 Icon Auctioneers. All rights reserved.</p>
+                <p>Payments accepted via M-Pesa & bank transfer</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="Assets/js/main.js"></script>
+</body>
+</html>
