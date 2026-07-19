@@ -75,8 +75,8 @@
         <div class="flex items-center space-x-4">
             <!-- Auth Buttons (Visible on Tablet/Desktop) -->
             <div class="hidden md:flex items-center space-x-4">
-                <a href="#" class="px-4 py-2 border border-gray-300 rounded hover:bg-gray-50 transition text-sm font-semibold">Sign in</a>
-                <a href="#" class="px-4 py-2 bg-[#08122B] text-white rounded hover:bg-blue-950 transition text-sm font-semibold">Register</a>
+                <a href="login.html" class="px-4 py-2 border border-gray-300 rounded hover:bg-gray-50 transition text-sm font-semibold">Sign in</a>
+                <a href="register.html" class="px-4 py-2 bg-[#08122B] text-white rounded hover:bg-blue-950 transition text-sm font-semibold">Register</a>
             </div>
 
             <!-- Hamburger Icon (Visible on Mobile/Tablet) -->
@@ -88,13 +88,19 @@
 
     <!-- Mobile Drawer -->
     <div id="mobile-menu" class="fixed inset-0 bg-[#08122B] text-white z-50 transform -translate-x-full transition-transform duration-300">
-        <!-- Drawer Header -->
+        <!-- Drawer Header (Updated with Auth Buttons) -->
         <div class="bg-white p-4 flex justify-between items-center shadow-sm">
             <img src="Assets/images/Icon_Auctioneers_logo.png" alt="Icon Auctioneers Logo" class="h-8 w-auto">
-            <button id="close-btn" class="text-[#08122B]">
-                <i class="fas fa-times text-2xl"></i>
-            </button>
+            
+            <div class="flex items-center space-x-2">
+                <a href="login.html" class="px-3 py-1 border border-gray-300 text-[#08122B] rounded text-xs font-semibold hover:bg-gray-50">Sign in</a>
+                <a href="register.html" class="px-3 py-1 bg-[#0033A0] text-white rounded text-xs font-semibold hover:bg-blue-900">Register</a>
+                <button id="close-btn" class="text-[#08122B] ml-2">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
         </div>
+        
         <!-- Drawer Links -->
         <div class="p-6 flex flex-col space-y-8 text-2xl font-bold">
             <a href="index.html">Home</a>
