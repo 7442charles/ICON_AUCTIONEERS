@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page Title & SEO -->
+    <title>Live & Upcoming Auctions | Icon Auctioneers Kenya</title>
+    <meta name="description" content="Browse live and upcoming auctions in Kenya. Bid on vehicles, machinery, office furniture, and household assets at Icon Auctioneers. Register to start bidding today.">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Live & Upcoming Auctions | Icon Auctioneers">
+    <meta property="og:description" content="View our current and upcoming auction lots across Nairobi, Mombasa, Nakuru, and Kisumu.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://iconauctioneers.co.ke/auctions">
+
+    <!-- Favicon -->
+    <link rel="icon" href="Assets/images/Icon_Auctioneers_logo.png" type="image/x-icon">
+    
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://iconauctioneers.co.ke/auctions">
+    
+    <!-- CSS Dependencies -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- SweetAlert2 CSS & JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Theme Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#08122B',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased">
+
+<!-- Top Info Bar Section -->
+<div class="bg-[#08122B] text-gray-400 text-xs py-2 border-b border-gray-800">
+    <div class="container mx-auto px-4 md:px-10 flex flex-wrap md:flex-nowrap justify-center md:justify-between items-center gap-y-2 gap-x-6">
+        
+        <!-- Contact Information: flex-row keeps them on the same line -->
+        <div class="flex flex-row items-center gap-4">
+            <a href="mailto:info@iconauctions.co.ke" class="hover:text-white transition-colors">
+                info@iconauctions.co.ke
+            </a>
+            <a href="tel:+254722488446" class="hover:text-white transition-colors">
+                +254 722 488 446
+            </a>
+        </div>
+        
+        <!-- Credential Info: w-full pushes it to a new line on mobile -->
+        <div class="w-full md:w-auto uppercase tracking-widest text-[10px] text-center md:text-right">
+            Class B Licensed & Insured - Est. 2005
+        </div>
+    </div>
+</div>
+
+<!-- Main Navbar -->
+<nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 md:px-10 py-4 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="/">
+            <img src="Assets/images/Icon_Auctioneers_logo.png" alt="Icon Auctioneers Logo" class="h-10 md:h-12 w-auto">
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center space-x-6 text-sm font-semibold text-gray-700">
+            <a href="#" class="hover:text-blue-700 transition ">Home</a>
+            <a href="#" class="hover:text-blue-700  border-b-2 border-blue-700 pb-1">Live & Upcoming</a>
+            <a href="#" class="hover:text-blue-700 transition">How It Works</a>
+            <a href="services.html" class="hover:text-blue-700 transition">Services</a>
+            <a href="premiums_comparison.html" class="hover:text-blue-700 transition">Premium</a>
+            <a href="#" class="hover:text-blue-700 transition">Gallery</a>
+            <a href="#" class="hover:text-blue-700 transition">Contact</a>
+        </div>
+
+        <!-- Right Side: Auth Buttons + Hamburger -->
+        <div class="flex items-center space-x-4">
+            <!-- Auth Buttons (Visible on Tablet/Desktop) -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="login.html" class="px-4 py-2 border border-gray-300 rounded hover:bg-gray-50 transition text-sm font-semibold">Sign in</a>
+                <a href="register.html" class="px-4 py-2 bg-[#08122B] text-white rounded hover:bg-blue-950 transition text-sm font-semibold">Register</a>
+            </div>
+
+            <!-- Hamburger Icon (Visible on Mobile/Tablet) -->
+            <button id="menu-btn" class="lg:hidden p-2 text-gray-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="fixed inset-0 bg-[#08122B] text-white z-50 transform -translate-x-full transition-transform duration-300">
+        <!-- Drawer Header (Updated with Auth Buttons) -->
+        <div class="bg-white p-4 flex justify-between items-center shadow-sm">
+            <img src="Assets/images/Icon_Auctioneers_logo.png" alt="Icon Auctioneers Logo" class="h-8 w-auto">
+            
+            <div class="flex items-center space-x-2">
+                <a href="login.html" class="px-3 py-1 border border-gray-300 text-[#08122B] rounded text-xs font-semibold hover:bg-gray-50">Sign in</a>
+                <a href="register.html" class="px-3 py-1 bg-[#0033A0] text-white rounded text-xs font-semibold hover:bg-blue-900">Register</a>
+                <button id="close-btn" class="text-[#08122B] ml-2">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Drawer Links -->
+        <div class="p-6 flex flex-col space-y-8 text-2xl font-bold">
+            <a href="index.html">Home</a>
+            <a href="Auctions_page.html">Live & Upcoming</a>
+            <a href="#">How It Works</a>
+            <a href="services.html">Services</a>
+            <a href="premiums_comparison.html">Premium</a>
+            <a href="#">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Auction Item Hero Section -->
+<section class="bg-gradient-to-br from-[#08122B] via-[#001D59] to-[#0037A6] py-16 text-white">
+    <div class="container mx-auto px-4 md:px-10">
+        
+        <!-- Breadcrumbs -->
+        <nav class="text-blue-200 text-xs uppercase tracking-widest mb-6 flex items-center space-x-2">
+            <a href="index.html" class="hover:text-white transition">Home</a>
+            <span>/</span>
+            <a href="Auctions_page.html" class="hover:text-white transition">Auctions</a>
+            <span>/</span>
+            <span class="text-white font-semibold">Isuzu FRR Truck, 10-Ton</span>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="max-w-4xl">
+            <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4 tracking-tight">
+                Isuzu FRR Truck, 10-Ton
+            </h1>
+            <p class="text-blue-100 text-sm md:text-base font-medium tracking-wide">
+                Lot #IA-2231 <span class="mx-2">•</span> Rajema Storage Yard, Kiambu Road
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Main Product Detail Section -->
+<section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            
+            <!-- Left Column: Images & Details Tabs (Span 7) -->
+            <div class="lg:col-span-7 space-y-8">
+                
+                <!-- Main Image Preview -->
+                <div class="bg-white p-2 rounded-lg border border-gray-200 shadow-sm">
+                    <!-- Added id="main-image" to target it via JS -->
+                    <img id="main-image" src="Assets/images/Isuzu_FRR_Truck.png" alt="Isuzu FRR Truck, 10-Ton" class="w-full h-[400px] md:h-[450px] object-cover rounded transition-opacity duration-300">
+                    
+                    <!-- Thumbnail Navigation Bar -->
+                    <div class="grid grid-cols-4 gap-2 mt-2">
+                        <button onclick="changeImage('Assets/images/Toyota_Land_Cruiser_Prado.png', this)" class="thumb-btn border-2 border-blue-700 rounded overflow-hidden h-20 focus:outline-none transition">
+                            <img src="Assets/images/Toyota_Land_Cruiser_Prado.png" class="w-full h-full object-cover">
+                        </button>
+                        <button onclick="changeImage('Assets/images/gallery-cars.png', this)" class="thumb-btn border border-gray-200 rounded overflow-hidden h-20 opacity-70 hover:opacity-100 transition">
+                            <img src="Assets/images/gallery-cars.png" class="w-full h-full object-cover">
+                        </button>
+                        <button onclick="changeImage('Assets/images/Caterpilla_Excavator.png', this)" class="thumb-btn border border-gray-200 rounded overflow-hidden h-20 opacity-70 hover:opacity-100 transition">
+                            <img src="Assets/images/Caterpilla_Excavator.png" class="w-full h-full object-cover">
+                        </button>
+                        <button onclick="changeImage('Assets/images/gallery-Trucks_heavy_Machinery.jpg', this)" class="thumb-btn border border-gray-200 rounded overflow-hidden h-20 opacity-70 hover:opacity-100 transition">
+                            <img src="Assets/images/gallery-Trucks_heavy_Machinery.jpg" class="w-full h-full object-cover">
+                        </button>
+                    </div>
+                </div>
+
+        <!-- Tabs: Description / Condition Report / Terms of Sale -->
+        <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+            <!-- Tab Navigation Buttons -->
+            <div class="flex border-b border-gray-200 space-x-8 text-sm font-semibold">
+                <button onclick="switchTab('description')" id="btn-description" class="tab-btn pb-3 border-b-2 border-blue-700 text-blue-700 transition">Description</button>
+                <button onclick="switchTab('condition')" id="btn-condition" class="tab-btn pb-3 text-gray-500 hover:text-gray-900 border-b-2 border-transparent transition">Condition Report</button>
+                <button onclick="switchTab('terms')" id="btn-terms" class="tab-btn pb-3 text-gray-500 hover:text-gray-900 border-b-2 border-transparent transition">Terms of Sale</button>
+            </div>
+            
+            <!-- Tab Content Panels -->
+            <div class="pt-6 text-sm text-gray-600 leading-relaxed">
+                
+                <!-- Description Content -->
+                <div id="content-description" class="tab-content space-y-4">
+                    <p>
+                        This 10-ton Isuzu FRR flatbed has been in continuous commercial service and is offered as a bank repossession following full documentation review. The vehicle has been serviced quarterly, with maintenance records available for inspection at the yard.
+                    </p>
+                    <p>
+                        Viewing is welcomed by appointment at our Kiambu Road yard ahead of the auction closing. Icon Auctioneers inspects and insures every lot prior to listing, and all sales are final at the fall of the hammer.
+                    </p>
+                </div>
+
+                <!-- Condition Report Content -->
+                <div id="content-condition" class="tab-content space-y-4 hidden">
+                    <p>
+                        <strong>Mechanical & Engine:</strong> Engine runs smoothly with no unusual smoke or fluid leaks observed during initial yard inspection. Transmission shifts cleanly through all gears.
+                    </p>
+                    <p>
+                        <strong>Body & Chassis:</strong> Minor cosmetic wear consistent with commercial mileage. Frame shows no structural modifications or heavy corrosion. Tires are at approximately 65% tread life.
+                    </p>
+                </div>
+
+                <!-- Terms of Sale Content -->
+                <div id="content-terms" class="tab-content space-y-4 hidden">
+                    <p>
+                        <strong>1. Deposit & Premium:</strong> A refundable bidding deposit may be required to clear bids. The winning bidder must pay a 10% buyer's premium plus applicable VAT.
+                    </p>
+                    <p>
+                        <strong>2. Settlement Period:</strong> Full settlement must be completed via M-Pesa or bank transfer within 48 hours of the auction closing. Failure to pay may result in forfeiture of the lot and deposit.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Tab Switching Script -->
+        <script>
+            function switchTab(tabName) {
+                // Hide all content panels
+                const contents = document.querySelectorAll('.tab-content');
+                contents.forEach(content => content.classList.add('hidden'));
+
+                // Remove active styles from all buttons
+                const buttons = document.querySelectorAll('.tab-btn');
+                buttons.forEach(btn => {
+                    btn.classList.remove('border-blue-700', 'text-blue-700');
+                    btn.classList.add('border-transparent', 'text-gray-500');
+                });
+
+                // Show target content panel
+                document.getElementById('content-' + tabName).classList.remove('hidden');
+
+                // Apply active styles to clicked button
+                const activeBtn = document.getElementById('btn-' + tabName);
+                activeBtn.classList.remove('border-transparent', 'text-gray-500');
+                activeBtn.classList.add('border-blue-700', 'text-blue-700');
+            }
+        </script>
+
+                <!-- Bid History Table -->
+                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                    <h3 class="font-serif font-bold text-lg text-[#08122B] mb-4">Bid history</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-sm">
+                            <thead>
+                                <tr class="border-b border-gray-200 text-gray-500 uppercase text-[10px] tracking-wider">
+                                    <th class="pb-3 font-bold">Bidder</th>
+                                    <th class="pb-3 font-bold">Amount</th>
+                                    <th class="pb-3 font-bold text-right">Time</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100 text-gray-700">
+                                <tr>
+                                    <td class="py-3 font-medium">Bidder #4471</td>
+                                    <td class="py-3 font-semibold">KES 1,840,000</td>
+                                    <td class="py-3 text-right text-gray-500 text-xs">14 min ago</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 font-medium">Bidder #2098</td>
+                                    <td class="py-3 font-semibold">KES 1,790,000</td>
+                                    <td class="py-3 text-right text-gray-500 text-xs">52 min ago</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 font-medium">Bidder #3355</td>
+                                    <td class="py-3 font-semibold">KES 1,720,000</td>
+                                    <td class="py-3 text-right text-gray-500 text-xs">2 hrs ago</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 font-medium">Bidder #4471</td>
+                                    <td class="py-3 font-semibold">KES 1,650,000</td>
+                                    <td class="py-3 text-right text-gray-500 text-xs">4 hrs ago</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Bidding Sidebar & Specs (Span 5) -->
+            <div class="lg:col-span-5 space-y-6">
+                
+            <!-- Bidding Card -->
+            <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm relative">
+                <div class="flex items-center space-x-2 mb-1">
+                    <span class="w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
+                    <span class="text-[10px] font-bold text-red-600 uppercase tracking-widest">Live Now</span>
+                </div>
+                <p class="text-xs text-gray-400 uppercase tracking-wider font-mono">Current Bid</p>
+                <h2 class="text-3xl font-serif font-bold text-[#08122B] mb-3">KES 1,860,000</h2>
+                
+                <div class="mb-6">
+                    <p class="text-xs text-gray-500 uppercase tracking-wider">Closes in</p>
+                    <p class="text-xl font-bold font-mono text-red-600">9h 36m 38s</p>
+                </div>
+
+                <hr class="border-gray-100 mb-6">
+
+                <!-- Quick Bid Buttons -->
+                <div class="space-y-4">
+                    <div>
+                        <span class="text-xs text-gray-500 block mb-2">Minimum next bid: <strong class="text-gray-800">KES 1,860,000</strong></span>
+                        <div class="grid grid-cols-3 gap-2">
+                            <button class="border border-gray-300 py-2 rounded text-xs font-mono font-bold hover:border-blue-700 hover:text-blue-700 transition">+20,000</button>
+                            <button class="border border-gray-300 py-2 rounded text-xs font-mono font-bold hover:border-blue-700 hover:text-blue-700 transition">+50,000</button>
+                            <button class="border border-gray-300 py-2 rounded text-xs font-mono font-bold hover:border-blue-700 hover:text-blue-700 transition">+100,000</button>
+                        </div>
+                    </div>
+
+                    <!-- Custom Bid Input -->
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-xs font-bold text-gray-500 font-mono">KES</span>
+                        <input type="number" id="customBidInput" value="1860000" class="w-full border border-gray-300 rounded p-3 pl-12 text-sm font-mono font-bold text-[#08122B] focus:border-blue-700 outline-none">
+                    </div>
+
+                    <!-- Place Bid Button -->
+                    <button onclick="handlePlaceBid()" class="w-full bg-[#0033A0] text-white py-4 rounded font-semibold hover:bg-blue-900 transition shadow-sm">
+                        Place Bid
+                    </button>
+                    
+                    <!-- Trigger Button for Price Alert Modal -->
+                    <button onclick="openPriceAlertModal()" class="w-full bg-white border border-gray-300 text-gray-700 py-3 rounded font-semibold hover:bg-gray-50 transition text-sm">
+                        Set Price Alert
+                    </button>
+                </div>
+            </div>
+
+            <!-- Price Alert Modal Structure -->
+            <div id="priceAlertModal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 hidden transition-opacity duration-300">
+                <div class="bg-white rounded-lg shadow-xl max-w-md w-full p-6 relative transform transition-all">
+                    
+                    <!-- Close Modal Button -->
+                    <button onclick="closePriceAlertModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+
+                    <h3 class="text-xl font-serif font-bold text-[#08122B] mb-1">Set Price Alert</h3>
+                    <p class="text-xs text-gray-500 mb-6">Get notified when this lot reaches your target threshold or exceeds it.</p>
+
+                    <form class="space-y-5" onsubmit="handlePriceAlertSubmit(event)">
+                        <!-- Target Price Input -->
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Target Price (KES)</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-xs font-bold text-gray-500 font-mono">KES</span>
+                                <input type="number" id="alertPriceInput" placeholder="1900000" class="w-full border border-gray-300 rounded p-3 pl-12 text-sm font-mono font-bold text-[#08122B] focus:border-blue-700 outline-none" required>
+                            </div>
+                        </div>
+
+                        <!-- Notification Channels -->
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Notification Method</label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <label class="border border-gray-200 rounded p-3 flex items-center space-x-3 cursor-pointer hover:border-blue-700 transition">
+                                    <input type="checkbox" name="notification_method" value="sms" class="text-blue-700 focus:ring-blue-700">
+                                    <div class="text-sm">
+                                        <span class="font-semibold block text-gray-800">SMS Message</span>
+                                        <span class="text-[10px] text-gray-500">Direct to mobile</span>
+                                    </div>
+                                </label>
+
+                                <label class="border border-gray-200 rounded p-3 flex items-center space-x-3 cursor-pointer hover:border-blue-700 transition">
+                                    <input type="checkbox" name="notification_method" value="whatsapp" class="text-blue-700 focus:ring-blue-700">
+                                    <div class="text-sm">
+                                        <span class="font-semibold block text-gray-800">WhatsApp</span>
+                                        <span class="text-[10px] text-gray-500">Instant chat alert</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Phone Number for Alerts -->
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Mobile Number for Alert</label>
+                            <input type="tel" placeholder="07XX XXX XXX" class="w-full border border-gray-300 rounded p-3 text-sm focus:border-blue-700 outline-none" required>
+                        </div>
+
+                        <!-- Actions -->
+                        <div class="flex space-x-3 pt-2">
+                            <button type="button" onclick="closePriceAlertModal()" class="w-1/2 border border-gray-300 text-gray-700 py-3 rounded text-sm font-semibold hover:bg-gray-50 transition">Cancel</button>
+                            <button type="submit" class="w-1/2 bg-[#0033A0] text-white py-3 rounded text-sm font-semibold hover:bg-blue-900 transition">Save Alert</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+                <!-- Item Specification Table -->
+                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                    <div class="divide-y divide-gray-100 text-sm">
+                        <div class="py-3 flex justify-between">
+                            <span class="text-gray-500">Category</span>
+                            <span class="font-semibold text-gray-900">Trucks & Machinery</span>
+                        </div>
+                        <div class="py-3 flex justify-between">
+                            <span class="text-gray-500">Yard</span>
+                            <span class="font-semibold text-gray-900">Rajema Storage Yard</span>
+                        </div>
+                        <div class="py-3 flex justify-between">
+                            <span class="text-gray-500">Load capacity</span>
+                            <span class="font-semibold text-gray-900">10 tons</span>
+                        </div>
+                        <div class="py-3 flex justify-between">
+                            <span class="text-gray-500">Condition</span>
+                            <span class="font-semibold text-gray-900">Serviced quarterly</span>
+                        </div>
+                        <div class="py-3 flex justify-between">
+                            <span class="text-gray-500">Settlement</span>
+                            <span class="font-semibold text-gray-900">M-Pesa or bank transfer</span>
+                        </div>
+                        <div class="py-3 flex justify-between">
+                            <span class="text-gray-500">Buyer's premium</span>
+                            <span class="font-semibold text-gray-900">10% + VAT</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Autobid / Premium Feature Section -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4 md:px-10">
+        <div class="bg-gradient-to-br from-[#08122B] via-[#001D59] to-[#0037A6] rounded-2xl p-8 md:p-14 text-white shadow-xl relative overflow-hidden">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Left Column: Copy & Features (Span 7) -->
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-xs uppercase tracking-widest text-blue-200 font-mono font-semibold">Premium - Autobid</span>
+                    
+                    <h2 class="text-3xl md:text-5xl font-serif font-bold tracking-tight leading-tight">
+                        Never lose a lot because you looked away.
+                    </h2>
+                    
+                    <p class="text-blue-100 text-sm md:text-base leading-relaxed max-w-xl">
+                        Set your maximum, and Autobid quietly outbids for you — right up to your limit — the instant someone else bids higher. Available exclusively on Premium and Elite Trader.
+                    </p>
+                    
+                    <!-- Checklist -->
+                    <div class="space-y-3 pt-2 text-sm text-blue-50">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-5 h-5 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-300">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <span>Bids automatically up to the max you set</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-5 h-5 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-300">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <span>24-hour early access before lots go public</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-5 h-5 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-300">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <span>SMS & WhatsApp alerts the moment you're outbid</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="premiums_comparison.html" class="bg-white text-[#08122B] px-8 py-3.5 rounded font-semibold text-sm hover:bg-gray-100 transition shadow-sm">
+                            Go Premium
+                        </a>
+                        <a href="premiums_comparison.html" class="border border-white/30 bg-transparent text-white px-8 py-3.5 rounded font-semibold text-sm hover:bg-white/10 transition">
+                            Compare Plans
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Widget Card (Span 5) -->
+                <div class="lg:col-span-5 flex justify-center lg:justify-end">
+                    <div class="bg-white text-gray-900 p-6 rounded-xl shadow-2xl w-full max-w-sm border border-gray-100">
+                        
+                        <p class="text-[11px] uppercase tracking-wider text-gray-400 font-mono mb-1">Your max bid</p>
+                        <h3 class="text-2xl font-serif font-bold text-[#08122B] mb-4">KES 2,100,000</h3>
+                        
+                        <!-- Progress Indicator Bar -->
+                        <div class="w-full bg-gray-100 h-2 rounded-full mb-6 overflow-hidden">
+                            <div class="bg-gradient-to-r from-blue-600 to-amber-500 h-full w-4/5 rounded-full"></div>
+                        </div>
+
+                        <div class="space-y-3 text-sm divide-y divide-gray-100">
+                            <div class="pt-3 flex justify-between items-center">
+                                <span class="text-gray-500 text-xs">Current bid</span>
+                                <span class="font-mono font-bold text-gray-800">KES 1,860,000</span>
+                            </div>
+                            <div class="pt-3 flex justify-between items-center">
+                                <span class="text-gray-500 text-xs">Autobid status</span>
+                                <span class="font-semibold text-emerald-600 text-xs flex items-center gap-1.5">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span> Active
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer Section -->
+<footer class="bg-[#08122B] text-gray-400 py-16 text-sm">
+    <div class="container mx-auto px-4 md:px-10">
+        
+        <!-- Main Footer Links -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <!-- Brand Column -->
+            <div class="space-y-4">
+                <img src="Assets/images/Icon_Auctioneers_footer_logo.jpg" alt="Icon Auctioneers Logo" class="h-12 w-auto">
+                <p>Licensed Class B auctioneers running live online and physical auctions for vehicles, property, machinery and household assets across Kenya since 2005.</p>
+            </div>
+
+            <!-- Company -->
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wider mb-6">Company</h4>
+                <ul class="space-y-4">
+                    <li><a href="#" class="hover:text-white transition">About</a></li>
+                    <li><a href="#" class="hover:text-white transition">Services</a></li>
+                    <li><a href="#" class="hover:text-white transition">Careers</a></li>
+                    <li><a href="#" class="hover:text-white transition">Gazette Listings</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wider mb-6">Support</h4>
+                <ul class="space-y-4">
+                    <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                    <li><a href="#" class="hover:text-white transition">Legal Notice</a></li>
+                    <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white transition">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <!-- Bidding -->
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wider mb-6">Bidding</h4>
+                <ul class="space-y-4">
+                    <li><a href="#" class="hover:text-white transition">Live Auctions</a></li>
+                    <li><a href="#" class="hover:text-white transition">Premium Membership</a></li>
+                    <li><a href="#" class="hover:text-white transition">Register to Bid</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="border-t border-gray-800 pt-8 space-y-8">
+            <p class="text-xs max-w-4xl">
+                Icon Auctioneers is a licensed Kenyan auctioneering firm offering online auctions Kenya, live vehicle auctions Nairobi, repossessed car auctions, bank auction vehicles, property and land auctions, machinery and truck auctions, and household item auctions, with public auction listings across Nairobi, Mombasa, Nakuru and Kisumu.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+                <p>&copy; 2026 Icon Auctioneers. All rights reserved.</p>
+                <p>Payments accepted via M-Pesa & bank transfer</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function changeImage(newSrc, buttonElement) {
+        // Update main image source
+        const mainImage = document.getElementById('main-image');
+        mainImage.src = newSrc;
+
+        // Reset borders and opacity on all thumbnails
+        const thumbnails = document.querySelectorAll('.thumb-btn');
+        thumbnails.forEach(btn => {
+            btn.classList.remove('border-2', 'border-blue-700');
+            btn.classList.add('border', 'border-gray-200', 'opacity-70');
+        });
+
+        // Highlight the clicked thumbnail
+        buttonElement.classList.remove('border', 'border-gray-200', 'opacity-70');
+        buttonElement.classList.add('border-2', 'border-blue-700', 'opacity-100');
+    }
+
+    function openPriceAlertModal() {
+        const modal = document.getElementById('priceAlertModal');
+        modal.classList.remove('hidden');
+    }
+
+    function closePriceAlertModal() {
+        const modal = document.getElementById('priceAlertModal');
+        modal.classList.add('hidden');
+    }
+
+    // Close modal when clicking outside content area
+    window.addEventListener('click', function(e) {
+        const modal = document.getElementById('priceAlertModal');
+        if (e.target === modal) {
+            closePriceAlertModal();
+        }
+    });
+    function handlePlaceBid() {
+        const bidAmount = document.getElementById('customBidInput').value;
+        
+        Swal.fire({
+            icon: 'success',
+            title: 'Bid Placed Successfully!',
+            text: `Your bid of KES ${Number(bidAmount).toLocaleString()} has been recorded.`,
+            confirmButtonColor: '#0033A0',
+            confirmButtonText: 'Okay'
+        });
+    }
+
+    function openPriceAlertModal() {
+        document.getElementById('priceAlertModal').classList.remove('hidden');
+    }
+
+    function closePriceAlertModal() {
+        document.getElementById('priceAlertModal').classList.add('hidden');
+    }
+
+    function handlePriceAlertSubmit(event) {
+        event.preventDefault();
+        const targetPrice = document.getElementById('alertPriceInput').value;
+        
+        closePriceAlertModal();
+
+        Swal.fire({
+            icon: 'success',
+            title: 'Price Alert Successfully Set!',
+            text: `We'll notify you when the price reaches KES ${Number(targetPrice).toLocaleString()}.`,
+            confirmButtonColor: '#0033A0',
+            confirmButtonText: 'Got it'
+        });
+    }
+
+    // Close modal when clicking outside content area
+    window.addEventListener('click', function(e) {
+        const modal = document.getElementById('priceAlertModal');
+        if (e.target === modal) {
+            closePriceAlertModal();
+        }
+    });
+</script>
+
+<script src="Assets/js/main.js"></script>
+</body>
+</html>
